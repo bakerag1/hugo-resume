@@ -2,272 +2,11 @@
 <div class="post">
   <h1>{{ .Title }}</h1>
   {{ $data := $.Site.Data.resume }}
-  {{ if eq .Params.Data "resume-mgr" }}
-  {{ $data := $.Site.Data.resumeMgr }}
+  {{ if .Params.Data }}
+  {{ $data := (index $.Site.Data .Params.Data) }}
   {{ end }}
   {{ with $data }}
-  <style type="text/css">
-    
-    @media print {
-      body {
-        visibility: hidden;
-      }
-      .dontbreak {
-        break-inside: avoid-page;
-      }
-      #resume {
-        visibility: visible;
-        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
-        color-adjust: exact !important;                 /* Firefox 48 – 96 */
-        print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
-        margin: 12px;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-    }
-
-    li {
-      color: black;
-      font-weight: 400;
-      text-decoration: none;
-      vertical-align: baseline;
-      font-size: 10pt;
-      font-family: "Georgia";
-      font-style: normal
-    }
-    
-    .c2 {
-      color: #666666;
-      font-weight: 400;
-      text-decoration: none;
-      vertical-align: baseline;
-      font-size: 9pt;
-      font-family: "Georgia";
-      font-style: normal
-    }
-    
-    .c3 {
-      padding-top: 0pt;
-      padding-bottom: 4pt;
-      line-height: 1.0;
-      text-align: left;
-      margin-right: 15pt
-    }
-    
-    .c6 {
-      color: #000000
-    }
-    
-    .c8 {
-      font-weight: 400
-    }
-    
-    .c10 {
-      color: inherit;
-      text-decoration: inherit
-    }
-    
-    .c12 {
-      border-right-style: solid;
-      padding: 7.2pt 7.2pt 7.2pt 7.2pt;
-      border-bottom-color: #ffffff;
-      border-top-width: 0pt;
-      border-right-width: 0pt;
-      border-left-color: #ffffff;
-      vertical-align: top;
-      border-right-color: #ffffff;
-      border-left-width: 0pt;
-      border-top-style: solid;
-      border-left-style: solid;
-      border-bottom-width: 0pt;
-      width: 380pt;
-      border-top-color: #ffffff;
-      border-bottom-style: solid
-    }
-
-    .c13 {
-      font-weight: 700;
-      text-decoration: none;
-      vertical-align: baseline;
-      font-size: 9pt;
-      font-family: "Georgia";
-      font-style: normal
-    }
-    
-    .c15 {
-      margin-left: -4.5pt;
-      border-spacing: 0;
-      border-collapse: collapse;
-      margin-right: auto
-    }
-  
-    .c16 {
-      color: #666666;
-      text-decoration: none;
-      vertical-align: baseline;
-      font-size: 6pt;
-      font-family: "Georgia";
-      font-style: normal
-    }
-  
-    .c20 {
-      height: 9pt
-    }
-
-    .c21 {
-      height: 80pt;
-    }
-  
-    .c22 {
-      -webkit-text-decoration-skip: none;
-      color: #1155cc;
-      font-weight: 700;
-      text-decoration: underline;
-      text-decoration-skip-ink: none;
-      font-family: "Georgia"
-    }
-    
-    .c25 {
-      border-right-style: solid;
-      padding: 7.2pt 7.2pt 7.2pt 0pt;
-      border-bottom-color: #ffffff;
-      border-top-width: 0pt;
-      border-right-width: 0pt;
-      border-left-color: #ffffff;
-      vertical-align: top;
-      border-right-color: #ffffff;
-      border-left-width: 0pt;
-      border-top-style: solid;
-      border-left-style: solid;
-      border-bottom-width: 0pt;
-      width: 140pt;
-      border-top-color: #ffffff;
-      border-bottom-style: solid
-    }
-
-    .c30 {
-      font-size: 11pt;
-      font-style: italic
-    }
-    
-    .c31 {
-      font-family: "Georgia";
-      font-weight: 700
-    }
-
-    .c32 {
-      padding-top: 6pt;
-      padding-bottom: 0pt;
-      line-height: 1.0;
-      text-align: left;
-      margin-right: 15pt
-    }
-
-    .c33 {
-      text-decoration: none;
-      vertical-align: baseline;
-      font-size: 11pt;
-      font-family: "Georgia";
-      font-style: normal
-    }
-
-    .title {
-      padding-top: 0pt;
-      color: #000000;
-      font-weight: 700;
-      font-size: 36pt;
-      padding-bottom: 6pt;
-      font-family: "Georgia";
-      line-height: 1.0;
-      text-align: center
-    }
-
-    .subtitle {
-      padding-top: 0pt;
-      color: #000000;
-      font-size: 10pt;
-      padding-bottom: 0pt;
-      font-family: "Georgia";
-      line-height: 1.15;
-      text-align: left;
-    }
-
-    .competencies {
-      padding-top: 0pt;
-      color: #000000;
-      font-size: 10pt;
-      padding-bottom: 0pt;
-      font-family: "Georgia";
-      line-height: 1.15;
-      text-align: center;
-      text-wrap-mode: wrap;
-      text-wrap-style: balance;
-    }
-
-    .experience {
-      padding-top: 0pt;
-      color: #000000;
-      background-color: #f0efef;
-      font-size: 12pt;
-      padding-bottom: 0pt;
-      font-family: "Georgia";
-      line-height: 1.15;
-      text-align: left;
-    }
-
-    p.contact {
-      margin: 0;
-      color: black;
-      font-size: 9pt;
-      font-family: "Georgia"
-    }
-
-    h1.section-head {
-      color: #2079c7;
-      font-size: 12pt;
-      padding-bottom: 0pt;
-      font-family: "Georgia";
-      line-height: 1.0;
-      text-align: left
-    }
-
-    h2 {
-      padding-top: 8pt;
-      color: #000000;
-      font-weight: 700;
-      font-size: 11pt;
-      padding-bottom: 0pt;
-      font-family: "Georgia";
-      line-height: 1.0;
-      page-break-after: avoid;
-      text-align: left
-    }
-
-    p.accomplishments {
-
-      font-size: 10pt;
-    }
-
-    ul.accomplishments {
-      background-color: rgb(247, 245, 245);
-      list-style: none;
-      text-align: center;
-    }
-
-    .section-head {
-      width: 100%;
-      font-size: large;
-      padding: 3pt;
-      color: white;
-      background-color: #ff7b0f;
-      text-align: center;
-    }
-
-    .page-break {
-      break-after: page;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="/css/resume.css">
  
  <div style="text-align: right;">
   <button onclick="window.print();return false;">🖨️ print</button>
@@ -284,24 +23,28 @@
         </p>
       </td>
       <td class="c25">
-        <p class="contact">Prescott, AZ</p>
-        {{ if not hugo.IsProduction }}
+        {{ with .location }}<p class="contact">{{.}}</p>{{ end }}
+        {{ if (or (not hugo.IsProduction) .showPrivate) }}
+          {{ with .private }}
+            {{ with .email}}
           <p class="contact"><span class="c31 c6">Email: </span><span class="c22"><a class="c10"
-            href="mailto:bakerag1@gmail.com">bakerag1@gmail.com</a></span>
+            href="mailto:{{ . }}">{{ . }}</a></span>
           </p>
+            {{ end }}
+            {{ with .phone }}
           <p class="contact"><span class="c31 c6">Phone: </span>
             <span class="c22">
-              <a class="c10" href="tel:6025516021">(602) 750-6413</a>
+              <a class="c10" href="tel:{{ replaceRE "[-.()]*" "" . }}">{{ . }}</a>
             </span>
           </p>
+            {{ end}}
+          {{ end }}
         {{ end }}
-        <p class="contact"><span class="c31 c6">LinkedIn: </span><span class="c22"><a class="c10"
-              href="https://www.linkedin.com/in/abaker2/">abaker2</a></span>
+        {{ range .links }}
+        <p class="contact"><span class="c31 c6">{{.label}}: </span><span class="c22"><a class="c10"
+              href="{{.url}}">{{default .label .display}}</a></span>
         </p>
-        <p class="contact"><span class="c6 c31">Website: </span><span class="c22"><a class="c10"
-              href="https://orangeru.work">orangeru.work</a></span></p>
-        <p class="contact"><span class="c6 c31">Github: </span><span class="c22"><a class="c10"
-              href="https://github.com/bakerag1">bakerag1</a></span><span class="c13 c6">&nbsp;</span></p>
+        {{ end }}
       </td>
     </tr>
   </table>

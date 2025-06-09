@@ -1,0 +1,68 @@
+title: Ina Halva Resumay
+tagline: |
+  Experienced resume owner and job haver of all kinds.
+location: Anytown, USA
+links:
+  - label: website
+    display: ina.example.org
+    url: https://ina.example.org
+  - label: linkedin
+    display: iresumay
+    url: https://example.org
+  - label: github
+    display: iresumay
+    url: https://example.org
+private:
+  phone: (555)555-5555
+  email: ina@example.org
+highlights: 
+  - Leadership
+  - Followership
+  - Middling
+  - List Compiling
+accomplishments:
+  - heavily involved in multiple examples
+  - trusted leader for several large thingies
+  - champion of pretty good practices
+personal: |
+  Outside of my professional life, I am an avid person, taking part in many personal endeavors.
+experience:
+  - company: Business People Businessing
+    title: Head People Person
+    location: Tempe, AZ
+    begin: Nov 2026
+    end: Sept 2029
+    description: |
+      implemented terrific things: 
+      * 80% increase in stuff
+      * led 50 people in businessing
+      * saved $20MM by doing savings 
+  - company: People Business Peopling
+    title: Sr. People Person
+    location: Phoenix, AZ
+    begin: Feb 2019
+    end: Oct 2026
+    description: |
+      Kept things real:
+      * 15% year over year realer
+      * increased business 28%
+      * third bullet point
+skills:
+  main:
+    - big data
+    - small data
+    - medium data
+    - web search
+  working:
+    - the mouse
+    - the tall thing under the desk
+    - the tv part
+education:
+  - school: College University
+    location: Boston, MA
+    begin: September 2004
+    end: May 2014
+    degree: B.A.
+certifications:
+  - name: Certified Internet Searcher
+  - name: AI Servant
