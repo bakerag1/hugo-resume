@@ -1,4 +1,4 @@
-baseURL: 'https://example.org/'
+baseURL: 'https://hugo-resume.orangeru.work/'
 languageCode: 'en-us'
 title: 'My Resume Site'
 params:

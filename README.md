@@ -2,6 +2,7 @@
 
 A hugo module for displaying a data-driven, printable resume.
 
+[🔗 demo site](https://hugo-resume.orangeru.work)
 ## features
 
 * define resume data independently of presentation
