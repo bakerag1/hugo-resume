@@ -3,6 +3,7 @@
 A hugo module for displaying a data-driven, printable resume.
 
 [🔗 demo site](https://hugo-resume.orangeru.work)
+
 ## features
 
 * define resume data independently of presentation
@@ -16,3 +17,8 @@ A hugo module for displaying a data-driven, printable resume.
 See the [exampleSite](./exampleSite/) directory for a working example.
 
 Simply import the module in your hugo config file and add your resume data file containing your details to your site's data directory
+
+## customization
+
+Customization can be done by adding a css file at `/static/css/custom-resume.css` containing
+changes to the classes defined in [resume.css](static/css/resume.css)

@@ -1,6 +1,7 @@
 baseURL: 'https://hugo-resume.orangeru.work/'
 languageCode: 'en-us'
 title: 'My Resume Site'
+
 params:
   description: 'An example site for the resume module'
 
